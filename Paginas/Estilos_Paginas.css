@@ -1,0 +1,78 @@
+/*--------------------------INTEGRANTES--------------------- */
+#fondo_integrantes {
+  background-color: rgb(25, 34, 46);
+  font-family: Century Gothic;
+  margin: 0px;
+  /* width: 100%; */
+}
+#titulo_integrantes div {
+  text-align: center;
+  background-color: rgb(33, 73, 110);
+  color: white;
+  margin: 0px;
+  padding: 40px;
+  background-image: url(../Imagenes/integrantes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -30px;
+  zoom: 120%;
+}
+
+#navegador ul {
+  list-style: none;
+  margin: 0px;
+  text-align: center;
+  background-color: rgb(20, 27, 37);
+}
+
+#navegador ul li {
+  display: inline;
+}
+#navegador ul li a {
+  font-size: 20px;
+  color: rgb(196, 186, 186);
+  text-decoration: none;
+  padding: 8px 10px;
+  display: inline-block;
+}
+#navegador ul li a:hover {
+  background-color: rgb(47, 62, 83); /* cuando el mouse se acerque*/
+  color: white;
+  border-radius: 3px;
+}
+.contenedor {
+  background-color: rgb(46, 63, 87);
+  color: aliceblue;
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+}
+
+.info_integrante {
+  overflow: hidden;
+  background-color: rgb(56, 79, 110);
+}
+/* EDICIÓN DE LAS IMAGENES */
+#img_chester {
+  float: left;
+  width: 200px;
+}
+#img_brad {
+  float: left;
+  width: 500px;
+}
+#img_dave {
+  float: right;
+  width: 300px;
+}
+#img_joe {
+  float: right;
+  width: 300px;
+}
+#img_mike {
+  float: left;
+  width: 300px;
+}
+
+
+

@@ -11,7 +11,9 @@
 
     <title>Linkin Park</title>
     <link rel="stylesheet" href="Estilos.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
+
 
 <body id="principal">
     <header id="encabezado">
@@ -20,13 +22,41 @@
         </div>
     </header>
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Páginas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="Paginas/Integrantes.html">Integrantes <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Paginas/Canciones.html">Canciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Paginas/Social.html" tabindex="-1" aria-disabled="true">Social</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
     <nav id="barra">
         <ul>
-            <li><a href="Paginas/Integrantes.html">Integrantes</a></li>
-            <li><a href="Paginas/Canciones.html">Canciones</a></li>
-            <li><a href="Paginas/Social.html">Redes/Multimedia</a> </li>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#albums">Albums</a></li>
+            <li><a style="font-size: 15px;" href="#contacto">Contacto</a></li>
+            <li><a style="font-size: 15px;" href="#usuario">Usuario</a></li>
+
         </ul>
     </nav>
+    
+    
 
     <div class="contenedor_principal">
         <div id="historia">
@@ -96,7 +126,7 @@
             </section>
         </div>
 
-        <div class="caja3">
+        <div id="albums" class="caja3">
             <h2 class="titulo2">Albums de la Banda </h2>
 
             <p>La discografía de Linkin Park, una banda estadounidense de rock,​ consta de siete álbumes de estudio, dos
@@ -287,6 +317,60 @@
             </div>
         </div>
 
+        <br> 
+        <div class="container" id="contacto">
+            <h2 style="text-align: center;">Contacto</h2>
+            <form action="/action_page.php" class="formulario">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ingrese su Correo" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Constraseña:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Ingrese su Contraseña"
+                        name="pswd">
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember"> Recordarme
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+        <br>
+
+        <div class="container" id="usuario">
+            <h2 style="text-align: center;">Usuario</h2>
+
+            <form action="/action_page.php" class="was-validated" >
+                <div class="form-group">
+                    <label for="uname">Usuario:</label>
+                    <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname"
+                        required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Contraseña:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd"
+                        required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Por favor rellene este campo.</div>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember" required>Estoy de acuerdo en
+                        aceptar los terminos y condiciones.
+                        <div class="valid-feedback">Valido.</div>
+                        <div class="invalid-feedback">Marque la casilla de verificación para continuar.</div>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+
+
         <div id="fuente">
             <h2>Fuentes de Información</h2>
             <div id="link">
@@ -312,8 +396,7 @@
             integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
             crossorigin="anonymous"></script>
         <script src="js/bootstrap.min.js"></script>
-        
+
 </body>
 
 </html>
-
