@@ -1,6 +1,6 @@
 body {
   font-family: Century Gothic;
-  margin: 0;   /* NUEVO */
+  margin: 0px;   /* NUEVO */
   /* width: 100%; */
 }
 /* -----------------------PAGINA PRINCIPAL - body ------------------- */
@@ -116,6 +116,8 @@ body {
 .titulo2 {
   font-size: 30px;
 }
+
+
 /* Contenedor de la info. de los albums */
 div p {
   background-color: rgb(116, 70, 27);
@@ -153,7 +155,7 @@ li {
 
 
 
-/*---------- Edicion de la seccion de usuario y contacto ------*/
+/*---------- Edicion de la seccion de contacto ------*/
 
 /* ------- Edición del Formulario CONTACTO --------------- */
 .container {
@@ -163,36 +165,40 @@ li {
   border-radius: 10px;
   padding: 3px;
 }
+.container h2{
+  text-align: center;
+}
 .formulario {
   margin: 10px;
   padding: 20px;
   border-radius: 10px;
   background-color: rgb(132, 133, 134);
 }
-/*------- Edición del Formulario USUARIO --------------- */
-#usuario{
-  font-family: Century Gothic;
-  background-color: rgb(94, 96, 97);
-  box-shadow: 5px 5px 10px rgb(224, 222, 221);
-  border-radius: 10px;
-  padding: 3px;
-}
-#usuario form{
-  margin: 10px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgb(112, 114, 117);
-  
-}
-
 .footer {
   background-color: rgb(29, 27, 27);
  
   color: white;
-  text-align: left;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 10px;
+  border-top: groove 2px rgb(207, 200, 200);
+}
+.footer ul li{
+  text-align: center;
+  list-style:none
+}
+.footer p{
+  background-color: rgb(29, 27, 27);
+ 
+  color: white;
+  text-align: center;
   font-size: 15px;
   bottom: 0px;
 }
+
+
 
 /* editar ancho de la tabla para que no se desconfigure */
 @media (max-width: 792px) {
@@ -205,9 +211,4 @@ li {
 
 
 
-/* SOCIAL */
-.botonimagen {
-  background-image: url(https://icon-icons.com/icons2/195/PNG/48/YouTube_23392.png);
-  width: 52px;
-  height: 52px;
-}
+

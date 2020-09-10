@@ -1,42 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social/Multimedia</title>
-    <link rel="stylesheet" href="../Estilos.css">
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Juego</title>
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="Estilos_Paginas.css">
+
+  <link rel="stylesheet" href="../css/normalize.css">
+
+  <link rel="icon" type="image/jpg" href="../Imagenes/icono.png">
+
+
+
 </head>
-<body>
-    <header>
-        <h1>Redes Sociales y Videos</h1>
-    </header>
-    <nav id="barra">   
-        <a href="../Index.html">Pagina Principal</a>
-        <a href="Integrantes.html">Integrantes</a>
-        <a href="Canciones.html">Canciones</a>     
-    </nav>
-   
-    <div id="shop">
-        <h2>Camisetas, gorras, discos en venta</h2>
-    </div>
-    <div id="youtube">
-        <h2>Youtube Oficial de la Banda</h2>
-        
-           <input type="button" value="" class="botonimagen">
-           
-           
-        
-        
-        
+
+<body class="body_juego">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Paginas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div  class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="../Index.html" target="_blank">Página Principal <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Integrantes.html" target="_blank">Integrantes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Canciones.html" tabindex="-1" aria-disabled="true" target="_blank">Canciones</a>
+        </li>
+      </ul>
 
     </div>
-    <div id="twitter">
-        <h2>Twitter</h2>
+  </nav>
+  <div style="border-bottom: groove 2px rgb(207, 200, 200);" class="jumbotron text-center">
+    <h1>Mini Juego</h1>
+    <p>Bienvenido al area entretenimiento, se va a poner a prueba su conocimiento sobre la reconocida banda de rock
+      llamada LINKIN PARK.
+    </p>
+  </div>
+  <div class="caja_fondo">
+    <div class="container border">
+      <h2 style="text-align: center; color: white;">Consigna</h2>
+      <p>Se le mostrara un texto con una adivinanza haciendo referencia al tema del sitio web, dispondra de 4 intentos
+        para acertar a la adivinanza, si no llega a encontrar la respues usted no es un verdadero fan de LINKIN PARK.
+        <br>
+        SUERTE.</p>
     </div>
-    <div id="instagram">
-        <h2>Twitter</h2>
+
+  </div>
+  <div class="caja_fondo">
+
+
+    <div id="contenedor_pregunta" class="container border">
+
+      <h2 style="font-size: 45px;">Pregunta/s</h2>
+      <p>INTENTOS:</p>
+
+      <!-- <p style="text-align: center;" id="numintentos">4</p> -->
+
+      <input class="visor_contador" id="numintentos" type="text" disabled="disabled" value="4">
+
+
+      <p style="text-align: center;" id="pregunta"> 1) Cual fue el álbum debut de la banda?</p>
+
+      <p id="pista1"></p>
+      <p id="pista2"></p>
+      <!--2da pregunta para facilitar-->
+      <!-- <input id="texto" type="text" class="form-control" placeholder="Ingrese su respuesta"> -->
+      <!-- <button id="boton" type="button" onclick="adivinanza()" value="envio" class="btn btn-primary">Aceptar</button> -->
     </div>
-  
-    
+    <br>
+
+    <form action="">
+
+      <div class="container border">
+
+        <label for="respuesta">Respuesta :</label>
+
+        <input id='respuesta' type="text" class="form-control" placeholder="Ingrese su respuesta">
+
+        <button id="btn1" type="button" onclick="adivinanza();" value="enviar" class="btn btn-primary">Aceptar</button>
+        <br><br>
+
+
+
+        <!-- alertas -->
+        <div id="alerta" class="alert alert-dark" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          Que comience el juego.
+        </div>
+
+        
+
+
+        <div id="alerta2" class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>¡FELICITACIONES!</strong> ganaste el juego!!!
+          Actualiza la pagina para volver a empezar.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div id="alerta3"class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>¡CUIDADO!</strong> Estas tratando de responder sin haber escrito una palabra, por favor ingrese su respuesta.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div id="alerta4"class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>¡PERDISTE!</strong> Actualiza la pagina para volver a empezar y completar la adivinanza.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+
+
+      </div>
+    </form>
+  </div>
+
+  <div class="footer">
+    <footer>
+        Sitio web creado utilizando:
+        <ul>
+            <li>HTML 5</li>
+            <li>CSS</li>
+            <li>Boostrap 4</li>
+        </ul>
+        <p>© 1997-2020 D'Andrea Omar Todos los derechos reservados.</p>
+    </footer>
+</div>
+
+
+  <script src="App.js"></script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+
+  <script>
+    //Cuando automaticamente inicie el documento la alerta no se 
+    //va a visualizar
+    $(document).ready(function () {
+      $("#alerta").hide();
+      $("#alerta2").hide();
+      $("#alerta3").hide();
+      $("#alerta4").hide();
+    })
+  </script>
+
+
+
 </body>
+
 </html>
